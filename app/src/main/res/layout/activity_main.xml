@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="79dp"
+        android:ems="10"
+        android:hint="introduzca primer valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/et2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="68dp"
+        android:ems="10"
+        android:hint="introduzca segundo valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/rbSumar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et1" />
+
+    <RadioButton
+        android:id="@+id/rbSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginBottom="31dp"
+        android:text="Sumar"
+        app:layout_constraintBottom_toTopOf="@+id/rbRestar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et2" />
+
+    <RadioButton
+        android:id="@+id/rbRestar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="Restar"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+        app:layout_constraintStart_toStartOf="@+id/rbSumar"
+        app:layout_constraintTop_toBottomOf="@+id/rbSumar" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="50dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/tv1"
+        app:layout_constraintStart_toStartOf="@+id/rbRestar"
+        app:layout_constraintTop_toBottomOf="@+id/rbRestar" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="126dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginBottom="105dp"
+        android:text="Resultado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
